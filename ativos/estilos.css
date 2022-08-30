@@ -1,0 +1,160 @@
+/* BASIC RESET */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+/* /BASIC RESET */
+
+#container
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-areas: 
+        ". h h h ."
+        "s s s s s"
+        ". m m m ."
+        ". f f f ."
+    ;
+    gap: 5px;
+}
+
+/* HEADER */
+#container > header
+{
+    display: flex;
+    flex-direction: row;
+    grid-area: h;
+
+    align-items: center;
+    gap: 5px;
+}
+
+#logo
+{
+    padding: 20px;
+}
+
+#navigator > ul
+{
+    display: flex;
+    flex-direction: row;
+
+    gap: 15px;
+
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+#navigator > ul > li > a:link
+{
+    text-decoration: none;
+}
+/* /HEADER */
+
+/* SLIDESHOW */
+#slideshow
+{
+    grid-area: s;
+
+    height: 400px;
+    text-align: center;
+
+    background-image: url(../imagens/slide.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#slideshow > h1
+{
+    font-size: 2em;
+    font-weight: 700;
+    color: black;
+    margin-top: 5%;
+}
+/* /SLIDESHOW*/
+
+/* MAIN */
+#container > main
+{
+    grid-area: m;
+}
+
+#container > main > h2
+{
+    margin: 7px;
+}
+
+#container > main > p
+{
+    margin: 5px;
+}
+
+/* GALLERY */
+#gallery > h1
+{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#gallery > ul
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#gallery > ul > li
+{
+    padding: 5px;
+}
+
+#gallery > ul > li > a > img
+{
+    height: 100px;
+}
+/* /GALLERY */
+/* /MAIN */
+
+#container > footer
+{
+    grid-area: f;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#container > footer > #logofooter
+{
+    padding: 25px;
+}
+
+#bio > h1
+{
+    margin: 7px;
+}
+
+#bio > p
+{
+    margin: 5px;
+}
